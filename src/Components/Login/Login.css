@@ -1,0 +1,135 @@
+/* Main Login Container */
+.login-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* White background */
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Background Elements */
+.background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.gradient-orb {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.7) 0%, rgba(0, 0, 0, 0) 70%);
+    filter: blur(100px);
+    opacity: 0.1;
+    top: 20%;
+    left: 30%;
+    transition: transform 1s ease;
+}
+
+.grid-background {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(transparent 95%, rgba(56, 189, 248, 0.05) 95%),
+      linear-gradient(90deg, transparent 95%, rgba(56, 189, 248, 0.05) 95%);
+    background-size: 40px 40px;
+    animation: grid-move 20s linear infinite;
+}
+
+.floating-element {
+    position: absolute;
+    background: radial-gradient(circle, rgba(200, 200, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 10s infinite ease-in-out;
+}
+
+/* Login Box */
+.login-box {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    z-index: 1;
+}
+
+.box-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Lighter border */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2); /* Increased shadow */
+    text-align: center;
+}
+
+/* Title and Subtitle */
+.title {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: rgba(100, 100, 100, 0.8); /* Subtle gray */
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    color: #333;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-field::placeholder {
+    color: #888;
+}
+
+.input-field:focus {
+    border-color: #56c5f7;
+    outline: none;
+}
+
+/* Button */
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #56c5f7;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #3498db;
+}
+
+/* Link Styles */
+.signup-link {
+    text-align: center;
+    color: #56c5f7;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 15px;
+}

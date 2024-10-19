@@ -1,0 +1,118 @@
+.premium-header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar {
+    padding: 0.9rem 1.5rem;
+    background-color: #ffffff;
+  }
+  
+  .premium-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #495057;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #007bff;
+  }
+  
+  .premium-badge {
+    background-color: #007bff;
+    color: white;
+    border-radius: 30%;
+    padding: 0.1rem 0.3rem;
+    font-size: 0.80rem;
+    margin-left: 0.2rem;
+    font-weight: 600;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    background-color: transparent;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #007bff;
+  }
+  
+ 
+
+  /* Bottom Navigation Styles */
+  .bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 0.8rem 0;
+  }
+
+  .bottom-nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #495057;
+  }
+
+  .bottom-nav-item i {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .bottom-nav-item span {
+    font-size: 0.75rem;
+  }
+
+  .bottom-nav-item.active {
+    color: #007bff;
+  }
+
+  /* Add padding to body to prevent content from being hidden behind bottom nav */
+  body {
+    padding-bottom: 70px;
+  }
+
+  @media (max-width: 768px) {
+    .bottom-nav {
+      display: block;
+    }
+
+    .navbar .navbar-nav {
+      display: none;
+    }
+
+    .premium-brand {
+      font-size: 1.2rem;
+    }
+
+    body {
+      padding-bottom: 70px;
+    }
+  }
