@@ -1,20 +1,72 @@
 /*Loading*/
 
 .loading-spinner {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #3498db;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .spinner-segment {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-    animation: spin 1s linear infinite;
+    border: 3px solid transparent;
+    border-top-color: #0ff;
+    animation: spin 1s cubic-bezier(0.17, 0.67, 0.83, 0.67) infinite;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
   }
-  
+
+  .spinner-segment:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .spinner-segment:nth-child(2) {
+    width: 80%;
+    height: 80%;
+    border-top-color: #f0f;
+    animation-delay: 0.15s;
+    animation-direction: reverse;
+  }
+
+  .spinner-segment:nth-child(3) {
+    width: 60%;
+    height: 60%;
+    border-top-color: #0f0;
+    animation-delay: 0.3s;
+  }
+
   @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
-  
+
+  @media screen and (max-width: 768px) {
+    .loading-spinner {
+      width: 90px;
+      height: 90px;
+    }
+    .spinner-segment {
+      border-width: 2.5px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .loading-spinner {
+      width: 60px;
+      height: 60px;
+    }
+    .spinner-segment {
+      border-width: 2px;
+    }
+  }
   .error-message {
     text-align: center;
     color: red;
