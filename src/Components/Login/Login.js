@@ -48,7 +48,7 @@ const Login = ({ setUser, setCartCount }) => { // Receive setCartCount prop
           })
           .catch((error) => console.error('Error fetching cart count:', error));
 
-        navigate('/');
+        setLoginErr('Login success');
       } else {
         setLoginErr(response.data.message || 'Invalid mobile or password');
       }
