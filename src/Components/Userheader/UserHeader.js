@@ -48,9 +48,18 @@ function UserHeader({ cartCount, user }) {
       {/* Bottom navigation for mobile view */}
       <nav className="bottom-nav">
         <ul className="bottom-nav-list">
+
+        <li>
+           
+           <Link className="bottom-nav-item active" to="/">
+           <i class="fa-solid fa-house"></i>
+           Home 
+         </Link>
+        
+       </li>
           <li>
            
-              <Link className="bottom-nav-item active" to="/cart">
+              <Link className="bottom-nav-item " to="/cart">
               <i className="fas fa-shopping-cart"><span className="premium-badge">{cartCount}</span></i>
               Cart 
             </Link>
